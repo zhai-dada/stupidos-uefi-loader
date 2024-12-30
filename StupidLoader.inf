@@ -1,0 +1,17 @@
+[Defines]
+    INF_VERSION                    = 0x00010005
+    BASE_NAME                      = StupidLoader
+    FILE_GUID                      = 732675FC-BDA3-9C07-E99E-194591C994B6
+    MODULE_TYPE                    = UEFI_APPLICATION
+    VERSION_STRING                 = 1.0
+    ENTRY_POINT                    = UefiMain
+
+[Sources]
+
+[Packages]
+
+[LibraryClasses]
+
+[Protocols]
+
+[Guids]
