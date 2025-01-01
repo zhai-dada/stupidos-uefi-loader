@@ -7,7 +7,16 @@
     ENTRY_POINT                    = UefiMain
 
 [Sources]
-
+    StupidLoader.c
+    ElfLib.h
+    ElfLib/ElfLibInternal.h
+    ElfLib/ElfCommon.h
+    ElfLib/Elf32.h
+    ElfLib/Elf64.h
+    ElfLib/ElfLibInternal.h
+    ElfLib/ElfLib.c
+    ElfLib/Elf32Lib.c
+    ElfLib/Elf64Lib.c
 [Packages]
 
 [LibraryClasses]
