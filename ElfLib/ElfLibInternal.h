@@ -18,7 +18,7 @@
 #include "Elf64.h"
 
 #define ELF_NEXT_ENTRY(EntryType, Current, EntrySize) \
-              ((EntryType *) ((UINT8 *)Current + EntrySize))
+	((EntryType *)((UINT8 *)Current + EntrySize))
 
 /**
   Return the section header specified by Index.
@@ -29,10 +29,9 @@
   @return Pointer to the section header.
 **/
 Elf32_Shdr *
-GetElf32SectionByIndex (
-  IN  UINT8   *ImageBase,
-  IN  UINT32  Index
-  );
+GetElf32SectionByIndex(
+	IN UINT8 *ImageBase,
+	IN UINT32 Index);
 
 /**
   Return the section header specified by Index.
@@ -43,10 +42,9 @@ GetElf32SectionByIndex (
   @return Pointer to the section header.
 **/
 Elf64_Shdr *
-GetElf64SectionByIndex (
-  IN  UINT8   *ImageBase,
-  IN  UINT32  Index
-  );
+GetElf64SectionByIndex(
+	IN UINT8 *ImageBase,
+	IN UINT32 Index);
 
 /**
   Return the segment header specified by Index.
@@ -57,10 +55,9 @@ GetElf64SectionByIndex (
   @return Pointer to the segment header.
 **/
 Elf32_Phdr *
-GetElf32SegmentByIndex (
-  IN  UINT8   *ImageBase,
-  IN  UINT32  Index
-  );
+GetElf32SegmentByIndex(
+	IN UINT8 *ImageBase,
+	IN UINT32 Index);
 
 /**
   Return the segment header specified by Index.
@@ -71,10 +68,9 @@ GetElf32SegmentByIndex (
   @return Pointer to the segment header.
 **/
 Elf64_Phdr *
-GetElf64SegmentByIndex (
-  IN  UINT8   *ImageBase,
-  IN  UINT32  Index
-  );
+GetElf64SegmentByIndex(
+	IN UINT8 *ImageBase,
+	IN UINT32 Index);
 
 /**
   Load ELF image which has 32-bit architecture
@@ -86,9 +82,8 @@ GetElf64SegmentByIndex (
 
 **/
 EFI_STATUS
-LoadElf32Image (
-  IN    ELF_IMAGE_CONTEXT  *ElfCt
-  );
+LoadElf32Image(
+	IN ELF_IMAGE_CONTEXT *ElfCt);
 
 /**
   Load ELF image which has 64-bit architecture
@@ -101,8 +96,7 @@ LoadElf32Image (
 
 **/
 EFI_STATUS
-LoadElf64Image (
-  IN    ELF_IMAGE_CONTEXT  *ElfCt
-  );
+LoadElf64Image(
+	IN ELF_IMAGE_CONTEXT *ElfCt);
 
 #endif

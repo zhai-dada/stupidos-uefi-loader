@@ -1,0 +1,41 @@
+[Defines]
+    INF_VERSION                    = 0x00010005
+    BASE_NAME                      = stupidos-uefi-loader
+    FILE_GUID                      = 732675FC-BDA3-9C07-E99E-194591C994B6
+    MODULE_TYPE                    = UEFI_APPLICATION
+    VERSION_STRING                 = 1.0
+    ENTRY_POINT                    = UefiMain
+
+[Sources]
+    stupidos-uefi-loader.c
+    ElfLib.h
+    baseinfo.h
+    ElfLib/ElfLibInternal.h
+    ElfLib/ElfCommon.h
+    ElfLib/Elf32.h
+    ElfLib/Elf64.h
+    ElfLib/ElfLibInternal.h
+    ElfLib/ElfLib.c
+    ElfLib/Elf32Lib.c
+    ElfLib/Elf64Lib.c
+[Packages]
+    MdePkg/MdePkg.dec
+    MdeModulePkg/MdeModulePkg.dec
+
+[LibraryClasses]
+    UefiLib
+    BaseMemoryLib
+    UefiApplicationEntryPoint
+    MemoryAllocationLib
+    DevicePathLib
+    UefiBootServicesTableLib
+[Protocols]
+    gEfiGraphicsOutputProtocolGuid
+    gEfiSimpleFileSystemProtocolGuid
+    gEfiLoadedImageProtocolGuid
+    gEfiDevicePathToTextProtocolGuid
+    gEfiDevicePathFromTextProtocolGuid
+    gEfiDevicePathProtocolGuid
+    gEfiDevicePathUtilitiesProtocolGuid
+[Guids]
+    gEfiFileInfoGuid
